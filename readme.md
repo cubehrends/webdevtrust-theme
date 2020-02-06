@@ -1,1 +1,1 @@
-# webdevtrust's Astra Child Theme
+# webdevtrust's Hello Child Theme

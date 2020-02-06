@@ -6,17 +6,14 @@
     $themename = "webdevtrust";
     $developer_uri = "https://webdevtrust.com";
     $shortname = "wdt";
-    define( 'WEBDEVTRUST_THEME_VERSION', '1.1.4' );
+    define( 'WEBDEVTRUST_THEME_VERSION', '1.2.0' );
     load_theme_textdomain( 'webdevtrust', get_template_directory() . '/languages' );
 
 ////////////////////////////////////////////////////////////////////
 // scripts
 ////////////////////////////////////////////////////////////////////
 function theme_enqueue() {
-    wp_enqueue_style( 'wdt-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), WEBDEVTRUST_THEME_VERSION, 'all' );
-    if( is_page_template( 'page-templates/custom-one-touch-scroll.php' ) ) {
-      wp_enqueue_script( 'wdt-ots-js', get_stylesheet_directory_uri() . '/js/one-touch-scroll.js', array('jquery'), '1.0', true);
-    }
+    wp_enqueue_style( 'wdt-css', get_stylesheet_directory_uri() . '/style.css', array('hello-elementor-theme-style'), WEBDEVTRUST_THEME_VERSION, 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue' );
 ////////////////////////////////////////////////////////////////////
